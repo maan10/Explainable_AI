@@ -9,17 +9,13 @@ from tensorflow.keras import backend as K
 import numpy as np
 import cv2
 
-def visualize_cam(model, image):
+def visualize_cam(model, layer_name, image):
     
     _, width, height, c = image.shape
     
-    layer_dict = dict([(layer.name, layer) for layer in model.layers])
-    final_conv_layer = layer_dict["conv_pw_13_relu"]
-
     class_weights = model.layers[-1].get_weights()[0]
-    # print('class_weights', class_weights.shape)
     
-    get_output = K.function([model.layers[0].input], [final_conv_layer.output, model.layers[-1].output])
+    get_output = K.function([model.layers[0].input], [model.get_layer(layer_name).output, model.layers[-1].output])
     [conv_outputs, predictions] = get_output(image)
 
     conv_outputs = conv_outputs[0, :, :, :]
@@ -31,8 +27,6 @@ def visualize_cam(model, image):
         cam += w * conv_outputs[:, :, i]
 
     cam /= np.max(cam)
-    
-    # print('cam size', cam.shape)
     cam = cv2.resize(cam, (600, 450))
     
     heatmap = cv2.applyColorMap(np.uint8(255 * (255 - cam)), cv2.COLORMAP_JET)
