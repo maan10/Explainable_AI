@@ -3,19 +3,72 @@
 Created on Mon Jun 29 20:41:50 2020
 
 @author: Vanditha Rao
+This script allows the user to plot the input image with top k prediction by
+the model. Image file can be of any format.
+
+This script requires that tensorflow and matplotlib be installed within the
+python environment you are running this script in.
+
+Here, tensorflow version 2.2, matplotlib version 3.1.3 and python version
+3.7.7 is used.
+
+This file is imported as a module and contains the following functions:
+
+    * plot_image 
+        
+        This function is used to plot the input image with the true label
+        and the prediction of the true label
+        
+    * plot_value_array
+    
+        This function is used to plot the horizontal bar plot of top k
+        predicitons from the model
+        
+    * heatmap_display
+    
+        This function create three subplots.
+        Subplot 1 calls plot_image function, subplot 2 calls plot_value_array
+        function and subplot 3 displays the output image. 
+        
+        To create more flexibility in creating an axes object at a specific
+        location of the grid, the script uses subplot2grid() function from
+        Matplotlib
+
 """
 
 import matplotlib.pyplot as plt
-from mpl_toolkits.axes_grid1 import make_axes_locatable
 import numpy as np
 import tensorflow 
-# from matplotlib.offsetbox import AnchoredOffsetbox, TextArea, HPacker, VPacker
+from mpl_toolkits.axes_grid1 import make_axes_locatable
 
 def plot_image(predictions_array,
                true_label,
                original_img,
                classes,
                ax):
+    
+    """
+    Plots the input image with the true label and the prediction of the
+    true label 
+        
+    Args:
+    
+    original_img: str
+    The input image filepath
+    
+    predictions_array: numpy.ndarray
+    numpy array of output predictions for the input image
+    
+    true_label: int
+    the true label of the input image
+    
+    classes: list
+    classes in the given dataset
+    
+    ax:
+    plot the image on the axes ax     
+       
+    """
      
     ax.set_xticks([])
     ax.set_yticks([])
@@ -26,35 +79,34 @@ def plot_image(predictions_array,
                                                      100*predictions_array[true_label]),
                   
                   color='green', va = 'top', ha = 'center', labelpad = 2, fontsize = 10, fontname = 'Times New Roman')
-    
-    ### To display the predicted label and the true label in two different
-    ### colors below the image (comment ax.set_xlabel)
-    
-    # predicted_label = np.argmax(predictions_array)
-    #if predicted_label == true_label:
-    #    color = 'g'
-    #else:
-    #    color = 'r'
-        
-    #xbox1 = TextArea("{} {:2.0f}%" .format(classes[predicted_label], 100*np.max(predictions_array)),
-    #                 textprops=dict(color=color, size=12, ha='left',va='top'))
-    
-    #xbox2 = TextArea("({} {:2.0f}%)" .format(classes[true_label], 100*predictions_array[true_label]),
-    #                 textprops=dict(color="g", size=12, ha='left',va='top'))
-    
-    #xbox = HPacker(children=[xbox1, xbox2],align="bottom", pad=0., sep=2)
-
-    #anchored_xbox = AnchoredOffsetbox(loc=8, child=xbox, pad=-0.5, frameon=False, # bbox_to_anchor=(0.08, 0.4), 
-    #                              bbox_transform=ax.transAxes, borderpad=0.)
-
-    #ax.add_artist(anchored_xbox)
-    
-
+     
 def plot_value_array(predictions_array,
                      true_label,
                      classes,
                      ax,
                      k):
+    
+    """
+    Plot the horizontal bar plot of top k predicitons from the model
+    
+    Args:
+    
+    predictions_array: numpy.ndarray
+    numpy array of output predictions for the input image
+    
+    true_label: int
+    the true label of the input image
+    
+    classes: list
+    classes in the given dataset
+    
+    ax:
+    plot the image on the axes ax   
+    
+    k: int
+    Number of top elements to look for 
+    
+    """
     
     prediciton_k_values, top_k_indices = tensorflow.nn.top_k(predictions_array, k)
     prediciton_k_values, top_k_indices = prediciton_k_values.numpy(), top_k_indices.numpy()
@@ -100,17 +152,50 @@ def heatmap_display(predictions_array,
                     true_label,
                     original_img,
                     aug_img,
-                    sensitivity_map,
+                    heatmap,
                     classes,
-                    colormap = 'viridis',
                     k = None,
-                    dpi = 80,
+                    colormap = 'viridis',
                     save_name = None):
+    
+  
+    """
+    Args:
+    
+    original_img: str
+    The input image filepath
+    
+    aug_img: str
+    The augmented image filepath
+    
+    predictions_array: numpy.ndarray
+    numpy array of output predictions for the input image
+    
+    true_label: int
+    the true label of the input image
+    
+    heatmap: numpy.ndarray
+    sensitivity maps with shape of dimension of the img
+    
+    classes: list
+    classes in the given dataset
+    
+    k: int (default = None)
+    Number of top elements to look for
+    
+    colormap: str (default= 'viridis')   
+    The Colormap instance or registered colormap name used to map scalar data
+    to colors. Colormaps is chosen from matplotlib
+    
+    save_name: str (default = None)
+    the output filename
+    
+    """
     
     if k == None:
         k = len(classes)
     
-    fig = plt.figure(figsize=(2,2), dpi=dpi, constrained_layout=False)
+    fig = plt.figure(figsize=(2,2), constrained_layout=False)
 
     # ------------------------------------------------------------------------
 
@@ -152,18 +237,20 @@ def heatmap_display(predictions_array,
     ax4.yaxis.set_major_locator((plt.NullLocator()))
     ax4.xaxis.set_major_locator((plt.NullLocator()))
     ax4.imshow(np.squeeze(original_img), alpha = 1)
-    hm = ax4.imshow(sensitivity_map, alpha = 0.7, cmap=colormap)
+    
+    hm = ax4.imshow(heatmap, alpha = 0.7, cmap=colormap)
 
     divider = make_axes_locatable(ax4)
     cax2 = divider.append_axes("right", size="5%", pad=0.05)
     plt.colorbar(hm, cax=cax2) 
                  
-    ax4.set_xlabel('(c)', labelpad = 36, fontsize = 14, fontname = 'Times New Roman')
+    ax4.set_xlabel('(c)', labelpad = 36, fontsize = 14,
+                   fontname = 'Times New Roman')
     
     fig.set_size_inches(w=15, h=5)
     
     if save_name != None:
-        fig.savefig(save_name, dpi=dpi,
+        fig.savefig(save_name,
                     bbox_inches = 'tight', pad_inches = 0)
     
     plt.show()
