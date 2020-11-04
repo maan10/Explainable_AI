@@ -3,6 +3,15 @@
 Created on Fri Aug  7 03:14:52 2020
 
 @author: Vanditha Rao
+
+This script allows the user to implement class activation maps. Image file can be of any format.
+This script requires that tensorflow and OpenCV be installed within the python environment you are
+running this script in.
+
+Here, tensorflow version 2.2, cv2 version 4.2.0 and python version 3.7.7 is used.
+
+This file is imported as a module and contains visualize_cam functions which implement class activation maps
+
 """
 
 from tensorflow.keras import backend as K
@@ -25,7 +34,7 @@ def visualize_cam(model,
    layer_name: str
    The layer name of the last convolutional layer
    
-   colormap: str (default='viridis')   
+   colormap: str (default= cv2.COLORMAP_JET)   
    The Colormap instance or registered colormap name used to map scalar data to colors. Colormaps is chosen from OpenCV
    
    """
