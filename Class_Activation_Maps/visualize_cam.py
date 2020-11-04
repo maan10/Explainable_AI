@@ -20,13 +20,12 @@ import cv2
 
 def visualize_cam(model,
                   layer_name,
-                  original_image,
+                  image,
                   colormap = cv2.COLORMAP_JET):
     
    """ 
-   original_img: str
-   The input image filepath
-   
+   image: str
+   The input image filepath. The model is trained with the augmented image. Hence, here in this case, image is an augmented image and not an original image
    
    model:
    tensorflow model
@@ -38,16 +37,11 @@ def visualize_cam(model,
    The Colormap instance or registered colormap name used to map scalar data to colors. Colormaps is chosen from OpenCV
    
    """
-    
-    _, width, height, c = original_image.shape
-    
-    img = cv2.resize(original_image, (224,224))
-    aug_img = next(datagen.flow(np.expand_dims(img, axis = 0), batch_size=1, shuffle=False))
-    
+   
     class_weights = model.layers[-3].get_weights()[0] # weights from softmax layer
     
     get_output = K.function([model.layers[0].input], [model.get_layer(layer_name).output, model.layers[-3].output])
-    [conv_outputs, predictions] = get_output(aug_img)
+    [conv_outputs, predictions] = get_output(image)
 
     conv_outputs = conv_outputs[0, :, :, :]
     class_idx = np.argmax(predictions)
@@ -58,7 +52,7 @@ def visualize_cam(model,
         cam += w * conv_outputs[:, :, i]
 
     cam /= np.max(cam)
-    cam = cv2.resize(cam, (width, height)) # the height and the width of the original image.
+    cam = cv2.resize(cam, (600, 450)) # the height and the width of the original image.
     
     heatmap = cv2.applyColorMap(np.uint8(255 * (255 - cam)), colormap)
     heatmap[np.where(cam < 0.2)] = 0   
