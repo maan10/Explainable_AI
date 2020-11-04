@@ -150,7 +150,6 @@ def heatmap_display(predictions_array,
                     aug_img,
                     sensitivity_map,
                     classes,
-                    colormap = 'viridis',
                     k = None,
                     save_name = None):
   
@@ -180,10 +179,6 @@ def heatmap_display(predictions_array,
             
             save_name: str (default = None)
             the output filename
-                        
-            colormap: str (default='viridis')
-            The Colormap instance or registered colormap name used to map
-            scalar data to colors. Colormaps is chosen from Matplotlib
             
     """
     
@@ -232,7 +227,7 @@ def heatmap_display(predictions_array,
     ax4.yaxis.set_major_locator((plt.NullLocator()))
     ax4.xaxis.set_major_locator((plt.NullLocator()))
     ax4.imshow(np.squeeze(original_img), alpha = 1)
-    ax4.imshow(sensitivity_map, alpha = 0.7, cmap=colormap)
+    ax4.imshow(sensitivity_map, alpha = 0.7)
 
                  
     ax4.set_xlabel('(c)', labelpad = 36, fontsize = 14, fontname = 'Times New Roman')
