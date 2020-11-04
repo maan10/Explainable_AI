@@ -38,7 +38,7 @@ def visualize_cam(model,
     class_weights = model.layers[-3].get_weights()[0] # weights from softmax layer
     
     get_output = K.function([model.layers[0].input], [model.get_layer(layer_name).output, model.layers[-3].output])
-    [conv_outputs, predictions] = get_output(image)
+    [conv_outputs, predictions] = get_output(aug_img)
 
     conv_outputs = conv_outputs[0, :, :, :]
     class_idx = np.argmax(predictions)
