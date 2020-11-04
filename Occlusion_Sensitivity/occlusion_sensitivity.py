@@ -124,8 +124,6 @@ class OcclusionSensitivity:
             
             sensitivity_map[index_y, index_x] = confidence
             
-            
-            
         sensitivity_map = cv2.resize(sensitivity_map, (original_img.shape[1], original_img.shape[0]))
         
         return sensitivity_map
