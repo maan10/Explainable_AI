@@ -45,26 +45,28 @@ def plot_image(predictions_array,
                original_img,
                classes,
                ax):
-  
-  """
-        Plots the input image with the true label and the prediction of the true label 
+    
+    """
+    Plots the input image with the true label and the prediction of the
+    true label 
         
-        Args:
-            
-            original_img: str
-            The input image filepath
-            
-            predictions_array: numpy.ndarray
-            numpy array of output predictions for the input image
-            
-            true_label: int
-            the true label of the input image
-            
-            classes: list
-            classes in the given dataset
-            
-            ax:
-            plot the image on the axes ax            
+    Args:
+    
+    original_img: str
+    The input image filepath
+    
+    predictions_array: numpy.ndarray
+    numpy array of output predictions for the input image
+    
+    true_label: int
+    the true label of the input image
+    
+    classes: list
+    classes in the given dataset
+    
+    ax:
+    plot the image on the axes ax     
+       
     """
      
     ax.set_xticks([])
@@ -82,26 +84,27 @@ def plot_value_array(predictions_array,
                      classes,
                      ax,
                      k):
-  
-  """
-        Plot the horizontal bar plot of top k predicitons from the model
-        
-        Args:
-            
-            predictions_array: numpy.ndarray
-            numpy array of output predictions for the input image
-            
-            true_label: int
-            the true label of the input image
-            
-            classes: list
-            classes in the given dataset
-            
-            ax:
-            plot the image on the axes ax   
-            
-            k: int
-            Number of top elements to look for 
+    
+    """
+    Plot the horizontal bar plot of top k predicitons from the model
+    
+    Args:
+    
+    predictions_array: numpy.ndarray
+    numpy array of output predictions for the input image
+    
+    true_label: int
+    the true label of the input image
+    
+    classes: list
+    classes in the given dataset
+    
+    ax:
+    plot the image on the axes ax   
+    
+    k: int
+    Number of top elements to look for 
+    
     """
     
     prediciton_k_values, top_k_indices = tensorflow.nn.top_k(predictions_array, k)
@@ -148,38 +151,39 @@ def heatmap_display(predictions_array,
                     true_label,
                     original_img,
                     aug_img,
-                    sensitivity_map,
+                    heatmap,
                     classes,
                     k = None,
                     save_name = None):
+    
   
-      """
-        Args:
-            
-            original_img: str
-            The input image filepath
-            
-            aug_img: str
-            The augmented image filepath
-            
-            predictions_array: numpy.ndarray
-            numpy array of output predictions for the input image
-            
-            true_label: int
-            the true label of the input image
-            
-            heatmap: numpy.ndarray
-            sensitivity maps with shape of dimension of the img
-            
-            classes: list
-            classes in the given dataset
-            
-            k: int (default = None)
-            Number of top elements to look for
-            
-            save_name: str (default = None)
-            the output filename
-            
+    """
+    Args:
+    
+    original_img: str
+    The input image filepath
+    
+    aug_img: str
+    The augmented image filepath
+    
+    predictions_array: numpy.ndarray
+    numpy array of output predictions for the input image
+    
+    true_label: int
+    the true label of the input image
+    
+    heatmap: numpy.ndarray
+    sensitivity maps with shape of dimension of the img
+    
+    classes: list
+    classes in the given dataset
+    
+    k: int (default = None)
+    Number of top elements to look for
+    
+    save_name: str (default = None)
+    the output filename
+    
     """
     
     if k == None:
@@ -227,10 +231,11 @@ def heatmap_display(predictions_array,
     ax4.yaxis.set_major_locator((plt.NullLocator()))
     ax4.xaxis.set_major_locator((plt.NullLocator()))
     ax4.imshow(np.squeeze(original_img), alpha = 1)
-    ax4.imshow(sensitivity_map, alpha = 0.7)
+    ax4.imshow(heatmap, alpha = 0.7)
 
                  
-    ax4.set_xlabel('(c)', labelpad = 36, fontsize = 14, fontname = 'Times New Roman')
+    ax4.set_xlabel('(c)', labelpad = 36, fontsize = 14,
+                   fontname = 'Times New Roman')
     
     fig.set_size_inches(w=15, h=5)
     
