@@ -9,7 +9,7 @@ the model. Image file can be of any format.
 This script requires that tensorflow and matplotlib be installed within the
 python environment you are running this script in.
 
-Here, tensorflow version 2.2, matplotlib version xx and python version
+Here, tensorflow version 2.2, matplotlib version 3.1.3 and python version
 3.7.7 is used.
 
 This file is imported as a module and contains the following functions:
