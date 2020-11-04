@@ -1,3 +1,21 @@
+"""
+Created on Fri Aug  7 03:14:52 2020
+@author: Vanditha Rao
+
+Highly inspired from https://github.com/sicara/tf-explain
+
+This script allows the user to implement occlusion sensitivity. Image file can
+be of any format.
+
+This script requires that tensorflow and OpenCV be installed within the python
+environment you are running this script in.
+
+Here, tensorflow version 2.2, cv2 version 4.2.0 and python version 3.7.7 is
+used. This file is imported as a module and contains visualize_cam functions
+which implement occlusion sensitivity
+
+"""
+
 import numpy as np
 import cv2
 import math
