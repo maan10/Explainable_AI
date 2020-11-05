@@ -29,7 +29,6 @@ This file is imported as a module and contains the following functions:
 
 import matplotlib.pyplot as plt
 import numpy as np
-from mpl_toolkits.axes_grid1 import make_axes_locatable
 from plot import plot_image, plot_value_array
 
 def heatmap_display(predictions_array,
@@ -122,12 +121,7 @@ def heatmap_display(predictions_array,
     ax4.xaxis.set_major_locator((plt.NullLocator()))
     ax4.imshow(np.squeeze(original_img), alpha = 1)
     
-    hm = ax4.imshow(heatmap, alpha = 0.7, cmap=colormap)
-
-    divider = make_axes_locatable(ax4)
-    cax2 = divider.append_axes("right", size="5%", pad=0.05)
-    plt.colorbar(hm, cax=cax2) 
-                 
+    ax4.imshow(heatmap, alpha = 0.7, cmap=colormap)
     ax4.set_xlabel('(c)', labelpad = 36, fontsize = 14,
                    fontname = 'Times New Roman')
     
