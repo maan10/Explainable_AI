@@ -39,6 +39,7 @@ This file is imported as a module and contains the following functions:
 import matplotlib.pyplot as plt
 import numpy as np
 import tensorflow 
+from top_3 import top_3
 
 def plot_image(predictions_array,
                true_label,
@@ -107,8 +108,7 @@ def plot_value_array(predictions_array,
     
     """
     
-    prediciton_k_values, top_k_indices = tensorflow.nn.top_k(predictions_array, k)
-    prediciton_k_values, top_k_indices = prediciton_k_values.numpy(), top_k_indices.numpy()
+    top_k_indices, prediciton_k_values = top_3(predictions_array, k)
 
     class_top_3 = []
 
