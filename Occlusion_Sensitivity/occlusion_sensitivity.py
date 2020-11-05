@@ -11,8 +11,8 @@ This script requires that tensorflow and OpenCV be installed within the python
 environment you are running this script in.
 
 Here, tensorflow version 2.2, cv2 version 4.2.0 and python version 3.7.7 is
-used. This file is imported as a module and contains visualize_cam functions
-which implement occlusion sensitivity
+used. This file is imported as a module and contains functions which implement
+occlusion sensitivity
 
 """
 
