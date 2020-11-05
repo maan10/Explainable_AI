@@ -62,7 +62,6 @@ def visualize_cam(model,
     cam = cv2.resize(cam, (600, 450)) # the height and the width of the original image.
     
     heatmap = cv2.applyColorMap(np.uint8(255 * (255 - cam)), colormap)
-    heatmap[np.where(cam < 0.2)] = 0   
-    predictions = predictions[0]
+    heatmap[np.where(cam < 0.2)] = 0
     
-    return predictions, heatmap
+    return heatmap
