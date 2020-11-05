@@ -23,7 +23,10 @@ def visualize_cam(model,
                   colormap = cv2.COLORMAP_JET):
     
     
-    """ 
+    """
+    
+    Args:
+    
     image: str
     The input image filepath. The model is trained with the augmented image.
     Hence, here in this case, image is an augmented image and not an original
@@ -38,6 +41,11 @@ def visualize_cam(model,
     colormap: str (default= cv2.COLORMAP_JET)   
     The Colormap instance or registered colormap name used to map scalar data
     to colors. Colormaps is chosen from OpenCV
+    
+    Returns:
+    
+    heatmap: np.ndarray
+    heatmap with shape (H,W)
     
     """
     
