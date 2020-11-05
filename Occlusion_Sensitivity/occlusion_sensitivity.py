@@ -60,7 +60,8 @@ class OcclusionSensitivity:
         
         Returns:
             
-            numpy.ndarray: Patched image
+            patched_image: numpy.ndarray
+            image with grey patch
         """
         
         width, height, _ = img.shape
@@ -114,7 +115,8 @@ class OcclusionSensitivity:
         
         Returns:
             
-            np.ndarray: Sensitivity map with shape (H, W)
+            sensitivity_map: np.ndarray
+            Sensitivity map with shape (H, W)
         """
     
         width, height, _ = aug_img.shape
