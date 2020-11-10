@@ -1,7 +1,7 @@
 Class activation maps are used to localize the skin lesion of the most likely class for the input image predicted by the model. This method works with CNN architecture that uses Global Average Pooling Layer.  
   
 To generate class activation maps, we perform the following two steps:
-* The softmax layer outputs probabilities for the seven classes. The argmax function over all the probabilities results in the most likely class for the image. The weights connected between the global average pooling layer and the softmax layer, i.e., the weights w<sub>1</sub>, w2,. . . , wn+1 of that class are extracted. Next, the
+* The softmax layer outputs probabilities for the seven classes. The argmax function over all the probabilities results in the most likely class for the image. The weights connected between the global average pooling layer and the softmax layer, i.e., the weights w <sub>1</sub>, w2,. . . , wn+1 of that class are extracted. Next, the
 feature maps from the last convolution layer are extracted. Hence, for n feature
 maps before the global average pooling layer, we get n weights connecting
 between the GAP layer and the Softmax layer.
