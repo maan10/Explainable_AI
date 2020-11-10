@@ -20,30 +20,30 @@ To generate class activation maps, we perform the following two steps:
 
 <div align="center">
 <img src="https://github.com/rao208/Explainable_AI/blob/master/Class_Activation_Maps/Results/bcc_1_cam-1.svg" >
-<p>Figure 2: Class Activation Maps result in Basal Cell Carcinoma class: (a) Input Image with top 3 predictions (b) Pre-processed Image (c) Heatmap on the input image</p>
+<p><b>Figure 2:</b> Class Activation Maps result in Basal Cell Carcinoma class: (a) Input Image with top 3 predictions (b) Pre-processed Image (c) Heatmap on the input image</p>
 </div>  
 
 <div align="center">
 <img src="https://github.com/rao208/Explainable_AI/blob/master/Class_Activation_Maps/Results/bkk_51_cam-1.svg" >
-<p>Figure 3: Class Activation Maps result in Benign Keratosis class: (a) Input Image with top 3 predictions (b) Pre-processed Image (c) Heatmap on the input image</p>
+<p><b>Figure 3:</b> Class Activation Maps result in Benign Keratosis class: (a) Input Image with top 3 predictions (b) Pre-processed Image (c) Heatmap on the input image</p>
 </div>  
 
 <div align="center">
 <img src="https://github.com/rao208/Explainable_AI/blob/master/Class_Activation_Maps/Results/df_9_cam.svg" >
-<p>Figure 4: Class Activation Maps result in Dermatofibroma class: (a) Input Image with top 3 predictions (b) Pre-processed Image (c) Heatmap on the input image</p>
+<p><b>Figure 4:</b> Class Activation Maps result in Dermatofibroma class: (a) Input Image with top 3 predictions (b) Pre-processed Image (c) Heatmap on the input image</p>
 </div>  
 
 <div align="center">
 <img src="https://github.com/rao208/Explainable_AI/blob/master/Class_Activation_Maps/Results/mcy_2_cam-1.svg" >
-<p>Figure 5: Class Activation Maps result in Melanocytic Nevi class: (a) Input Image with top 3 predictions (b) Pre-processed Image (c) Heatmap on the input image</p>
+<p><b>Figure 5:</b> Class Activation Maps result in Melanocytic Nevi class: (a) Input Image with top 3 predictions (b) Pre-processed Image (c) Heatmap on the input image</p>
 </div>  
 
 <div align="center">
 <img src="https://github.com/rao208/Explainable_AI/blob/master/Class_Activation_Maps/Results/mel_38_cam.svg" >
-<p>Figure 6: Class Activation Maps result in Melanoma class: (a) Input Image with top 3 predictions (b) Pre-processed Image (c) Heatmap on the input image</p>
+<p><b>Figure 6:</b> Class Activation Maps result in Melanoma class: (a) Input Image with top 3 predictions (b) Pre-processed Image (c) Heatmap on the input image</p>
 </div>  
 
 <div align="center">
 <img src="https://github.com/rao208/Explainable_AI/blob/master/Class_Activation_Maps/Results/vasc_4_cam-1.svg" >
-<p>Figure 7: Class Activation Maps result in Vascular Lesions class: (a) Input Image with top 3 predictions (b) Pre-processed Image (c) Heatmap on the input image</p>
+<p><b>Figure 7:</b> Class Activation Maps result in Vascular Lesions class: (a) Input Image with top 3 predictions (b) Pre-processed Image (c) Heatmap on the input image</p>
 </div>  
