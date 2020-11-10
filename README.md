@@ -1,9 +1,8 @@
-* TOC
-
-1. Header 1
-2. Header 2
-
-{:toc}
+# Table of contents
+1. [Introduction](#introduction)
+2. [Some paragraph](#paragraph1)
+    1. [Sub paragraph](#subparagraph1)
+3. [Another paragraph](#paragraph2)
 
 # **Introduction** #
 <p align="justify">According to the Global Cancer Statistics 2018, cancer is a prominent cause of death worldwide, with nearly 9.6 million deaths in 2018 [1]. Non-melanoma skin cancer is the fifth most common cancer, with 1.04 million new cases in 2018 [1]. In contrast, Melanoma, the deadliest type of skin cancer, is the 19th most commonly occurring cancer with nearly 300,000 new cases in 2018 [1]. The early detection of cancer significantly improves the diagnosis of patients.</p>  
