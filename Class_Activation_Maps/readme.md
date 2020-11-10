@@ -1,3 +1,5 @@
+# **Class activation maps** #
+
 Class activation maps are used to localize the skin lesion of the most likely class for the input image predicted by the model. This method works with CNN architecture that uses Global Average Pooling (GAP) Layer.  
   
 To generate class activation maps, we perform the following two steps:  
