@@ -22,5 +22,15 @@
 
 <p align="justify">Two explainable models are selected to test. The first method is the perturbationbased forward propagation method in which the input is perturbed, and its possible effects on the prediction of the model are examined. The perturbation based method used here is Occlusion Sensitivity. The second method is Class Activation Maps (CAM). The important regions of the image are highlighted by projecting back the weights of the output on the convolutional feature maps using this method. These are a good choice as they provide easy to understand heatmaps from the input images. The goal of the XAI method selection was to have different explaining models to have a good understanding of different approaches. Occlusion Sensitivity is meant to be used with all classification methods, whereas CAM can be used with layered models such as CNN. With two different methods, it is also sufficient to learn the differences, pros, and cons of each method. </p>  
 
+# **Roadmap** #
+
+- [ ] Layerwise Relevance Propagation
+- [ ] DeepLift
+- [ ] Q&A for explanation
+- [ ] Explanation to distinguish between cancerous and non-cancerous 
+
 # **Licence** #
-# **Link** #
+MIT License  
+
+# **Link** #  
+
