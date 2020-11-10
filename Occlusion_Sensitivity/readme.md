@@ -1,4 +1,4 @@
-#**Occlusion sensitivity**#
+# **Occlusion sensitivity** #
 <p align="justify">Occlusion sensitivity on skin lesion helps us to gain a high-level understanding of what image features a model uses, to make a particular classification. It also helps in providing sanity checks on the learning strategy and provides reasons why a model can misclassify an image. In the medical field, checking the reliability of the model is very important. Therefore, performing a sanity check is very crucial. The approach is to implement occlusion sensitivity on the given image is as follows:</p>
 
 1. <p align="justify">A small area of the input image is perturbed by replacing it with a patch (typically a grey square). The patch slides over the entire image, as shown in Figure below</p>
