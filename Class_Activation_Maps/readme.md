@@ -44,6 +44,6 @@ To generate class activation maps, we perform the following two steps:
 </div>  
 
 <div align="center">
-<img src="https://github.com/rao208/Explainable_AI/blob/master/Class_Activation_Maps/Results/vasc_4_cam.pdf" >
+<img src="https://github.com/rao208/Explainable_AI/blob/master/Class_Activation_Maps/Results/vasc_4_cam-1.svg" >
 <p>Figure 7: Class Activation Maps result in Vascular Lesions class: (a) Input Image with top 3 predictions (b) Pre-processed Image (c) Heatmap on the input image</p>
 </div>  
