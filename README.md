@@ -2,6 +2,7 @@
 1. [Introduction](#Introduction)
     1. [Problem Statement](#Problem_Statement)
     2. [Objective](#Objective)
+2. [Roadmap](#Roadmap)
 2. [Licence](#Licence)
 3. [Link](#Link)
 
@@ -24,9 +25,10 @@
 
 # **Roadmap** #
 
-- [ ] Layerwise Relevance Propagation
-- [ ] DeepLift
-- [ ] Q&A for explanation
+- [ ] Additional Methods
+    - [ ] Layerwise Relevance Propagation
+    - [ ] DeepLift
+    - [ ] Q&A for explanation
 - [ ] Explanation to distinguish between cancerous and non-cancerous 
 
 # **Licence** #
