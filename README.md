@@ -1,6 +1,6 @@
 # Table of contents
 1. [Introduction](#Introduction)
-    1. [Problem Statement](#Problem Statement)
+    1. [Problem Statement](#Problem_Statement)
     2. [Objective](#Objective)
 2. [Licence](#Licence)
 3. [Link](#Link)
@@ -20,4 +20,7 @@
 ## **Objective** ## 
 <p align="justify">The goal is to explore the presented research gap on how to explain the classification decisions of different types of skin lesions made by the CNN model trained on Human Against Machine with 10000 training images(HAM10000) skin lesion dataset. To the best of the author’s knowledge, very few research exists in skin cancer research that looked into the explanation of a CNN model trained on skin cancer datasets [7]. The aim is to visualize these explanations by generating heatmaps which are superimposed on the input image. The heatmaps hold great potential in assisting and understanding diagnostic decisions performed by CNNs.</p>
 
-<p align="justify">Two explainable models are selected to test. The first method is the perturbationbased forward propagation method in which the input is perturbed, and its possible effects on the prediction of the model are examined. The perturbation based method used here is Occlusion Sensitivity. The second method is Class Activation Maps (CAM). The important regions of the image are highlighted by projecting back the weights of the output on the convolutional feature maps using this method. These are a good choice as they provide easy to understand heatmaps from the input images. The goal of the XAI method selection was to have different explaining models to have a good understanding of different approaches. Occlusion Sensitivity is meant to be used with all classification methods, whereas CAM can be used with layered models such as CNN. With two different methods, it is also sufficient to learn the differences, pros, and cons of each method. </p>
+<p align="justify">Two explainable models are selected to test. The first method is the perturbationbased forward propagation method in which the input is perturbed, and its possible effects on the prediction of the model are examined. The perturbation based method used here is Occlusion Sensitivity. The second method is Class Activation Maps (CAM). The important regions of the image are highlighted by projecting back the weights of the output on the convolutional feature maps using this method. These are a good choice as they provide easy to understand heatmaps from the input images. The goal of the XAI method selection was to have different explaining models to have a good understanding of different approaches. Occlusion Sensitivity is meant to be used with all classification methods, whereas CAM can be used with layered models such as CNN. With two different methods, it is also sufficient to learn the differences, pros, and cons of each method. </p>  
+
+# **Licence** #
+# **Link** #
