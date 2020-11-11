@@ -10,6 +10,4 @@
 <img src="https://github.com/rao208/Explainable_AI/blob/master/Images/patches.svg" >
 <p><b>Figure 1:</b> Grey patch over the image</b></div>  
 
-<div align="center">
-<img src="https://github.com/rao208/Explainable_AI/blob/master/Images/PATCH_64.gif)" >
-<p><b>Figure 1:</b> Grey patch over the image</b></div>  
+![Alt Text](https://github.com/rao208/Explainable_AI/blob/master/Images/PATCH_64.gif) 
