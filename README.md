@@ -24,6 +24,16 @@
 
 <p align="justify">Two explainable models are selected to test. The first method is the perturbationbased forward propagation method in which the input is perturbed, and its possible effects on the prediction of the model are examined. The perturbation based method used here is Occlusion Sensitivity. The second method is Class Activation Maps (CAM). The important regions of the image are highlighted by projecting back the weights of the output on the convolutional feature maps using this method. These are a good choice as they provide easy to understand heatmaps from the input images. The goal of the XAI method selection was to have different explaining models to have a good understanding of different approaches. Occlusion Sensitivity is meant to be used with all classification methods, whereas CAM can be used with layered models such as CNN. With two different methods, it is also sufficient to learn the differences, pros, and cons of each method. </p>  
 
+## **References** ##
+[1] F. Bray, J. Ferlay, I. Soerjomataram, R. L. Siegel, L. A. Torre, and A. Jemal, “Global cancer statistics 2018: GLOBOCAN estimates of incidence and mortality
+worldwide for 36 cancers in 185 countries,” CA: A Cancer Journal for Clinicians, vol. 68, no. 6, pp. 394–424, 2018.  
+[2] L. Yann and B. Yoshua, “Convolutional Networks for Images, Speech, and Time-Series,” vol. 4, no. April 2016, pp. 2571–2575, 1995.  
+[3] A. Krizhevsky, I. Sutskever, and G. E. Hinton, “ImageNet classification with deep convolutional neural networks,” Communications of the ACM, vol. 60, no. 6,
+pp. 84–90, 2017.  
+[4] K. Simonyan and A. Zisserman, “Very deep convolutional networks for large-scale image recognition,” 3rd International Conference on Learning Representations,
+ICLR 2015 - Conference Track Proceedings, pp. 1–14, 2015.  
+[5] C. Szegedy, W. Liu, Y. Jia, P. Sermanet, S. E. Reed, D. Anguelov, D. Erhan, V. Vanhoucke, and A. Rabinovich, “Going Deeper with Convolutions,” CoRR, vol. abs/1409.4, 2014.  
+
 # **Roadmap** #
 
 - [ ] Additional Methods
