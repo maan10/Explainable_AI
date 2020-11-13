@@ -27,12 +27,13 @@
 ## **References** ##
 [1] F. Bray, J. Ferlay, I. Soerjomataram, R. L. Siegel, L. A. Torre, and A. Jemal, “Global cancer statistics 2018: GLOBOCAN estimates of incidence and mortality
 worldwide for 36 cancers in 185 countries,” CA: A Cancer Journal for Clinicians, vol. 68, no. 6, pp. 394–424, 2018.  
-[2] L. Yann and B. Yoshua, “Convolutional Networks for Images, Speech, and Time-Series,” vol. 4, no. April 2016, pp. 2571–2575, 1995.  
-[3] A. Krizhevsky, I. Sutskever, and G. E. Hinton, “ImageNet classification with deep convolutional neural networks,” Communications of the ACM, vol. 60, no. 6,
-pp. 84–90, 2017.  
-[4] K. Simonyan and A. Zisserman, “Very deep convolutional networks for large-scale image recognition,” 3rd International Conference on Learning Representations,
-ICLR 2015 - Conference Track Proceedings, pp. 1–14, 2015.  
-[5] C. Szegedy, W. Liu, Y. Jia, P. Sermanet, S. E. Reed, D. Anguelov, D. Erhan, V. Vanhoucke, and A. Rabinovich, “Going Deeper with Convolutions,” CoRR, vol. abs/1409.4, 2014.  
+[2] A. Esteva, B. Kuprel, R. A. Novoa, J. Ko, S. M. Swetter, H. M. Blau, and S. Thrun, “Dermatologist-level classification of skin cancer with deep neural networks,” Nature, vol. 542, no. 7639, pp. 115–118, 2017.   
+[3] C. Szegedy, V. Vanhoucke, S. Ioffe, J. Shlens, and Z. Wojna, “Rethinking the inception architecture for computer vision,” 2015. 
+[4] L. Yu, H. Chen, Q. Dou, J. Qin, and P. Heng, “Automated melanoma recognition in dermoscopy images via very deep residual networks,” IEEE Transactions on Medical Imaging, vol. 36, no. 4, pp. 994–1004, 2017.   
+[5] H. A. Haenssle, C. Fink, R. Schneiderbauer, F. Toberer, T. Buhl, A. Blum, A. Kalloo, A. B. H. Hassen, L. Thomas, A. Enk, L. Uhlmann, C. Alt, M. Arenbergerova, R. Bakos, A. Baltzer, I. Bertlich, A. Blum, T. Bokor-Billmann,J. Bowling, N. Braghiroli, R. Braun, K. Buder-Bakhaya, T. Buhl, H. Cabo, L. Cabrijan, N. Cevic, A. Classen, D. Deltgen, C. Fink, I. Georgieva, L.-E. Hakim-Meibodi, S. Hanner, F. Hartmann, J. Hartmann, G. Haus, E. Hoxha, R. Karls, H. Koga, J. Kreusch, A. Lallas, P. Majenka, A. Marghoob, C. Massone, L. Mekokishvili, D. Mestel, V. Meyer, A. Neuberger, K. Nielsen, M. Oliviero, R. Pampena, J. Paoli, E. Pawlik, B. Rao, A. Rendon, T. Russo, A. Sadek, K. Samhaber, R. Schneiderbauer, A. Schweizer, F. Toberer, L. Trennheuser, L. Vlahova, A. Wald, J. Winkler, P. Wölbing, and I. Zalaudek, “Man against machine: diagnostic performance of a deep learning convolutional neural network for dermoscopic melanoma recognition in comparison to 58 dermatologists.,” Annals of oncology : official journal of the European Society for Medical Oncology, vol. 29, pp. 1836–1842, aug 2018
+[6] U.-O. Dorj, K.-K. Lee, J.-y. Choi, and M. Lee, “The skin cancer classification using deep convolutional neural network,” Multimedia Tools and Applications,
+vol. 77, 02 2018.  
+[7] A. Lucieri, M. N. Bajwa, S. A. Braun, M. I. Malik, A. Dengel, and S. Ahmed, “On interpretability of deep learning based skin lesion classifiers using concept activation vectors,” 2020.  
 
 # **Roadmap** #
 
